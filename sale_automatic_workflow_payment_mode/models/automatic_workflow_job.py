@@ -13,7 +13,6 @@ _logger = logging.getLogger(__name__)
 class AutomaticWorkflowJob(models.Model):
     _inherit = 'automatic.workflow.job'
 
-    @api.model
     def run_with_workflow(self, sale_wkf):
         workflow_domain = [('workflow_process_id', '=', sale_wkf.id)]
         res = super(AutomaticWorkflowJob, self).run_with_workflow(sale_wkf)
@@ -23,7 +22,6 @@ class AutomaticWorkflowJob(models.Model):
                 workflow_domain)
         return res
 
-    @api.model
     def _register_payments(self, payment_filter):
         invoice_obj = self.env['account.invoice']
         invoices = invoice_obj.search(payment_filter)

@@ -7,7 +7,6 @@ from odoo import models, fields, api
 class SaleWorkflowProcess(models.Model):
     _inherit = "sale.workflow.process"
 
-    @api.model
     def _default_payment_filter_id(self):
         xmlid = ('sale_automatic_workflow_payment_mode.'
                  'automatic_workflow_payment_filter')
