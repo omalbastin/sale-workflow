@@ -23,11 +23,11 @@ class AutomaticWorkflowJob(models.Model):
         return res
 
     def _register_payments(self, payment_filter):
-        invoice_obj = self.env['account.invoice']
+        invoice_obj = self.env['account.move']
         invoices = invoice_obj.search(payment_filter)
         _logger.debug('Invoices to Register Payment: %s', invoices.ids)
         for invoice in invoices:
-            partner_type = invoice.type in ('out_invoice', 'out_refund') and \
+            partner_type = invoice.move_type in ('out_invoice', 'out_refund') and \
                 'customer' or 'supplier'
             payment_mode = invoice.payment_mode_id
 
