@@ -56,15 +56,17 @@
                             <div class="col-sm-8">
                                 <label
                                     for="order_filter_id"
-                                    attrs="{'required':[('validate_order','=',True)], 'invisible':[('validate_order','!=',True)]}"
+                                    required="validate_order == True"
+                                    invisible="validate_order != True"
                                 />
                                 <div
-                                    attrs="{'required':[('validate_order','=',True)], 'invisible':[('validate_order','!=',True)]}"
+                                    required="validate_order == True"
+                                    invisible="validate_order != True"
                                 >
                                     <field
                                         name="order_filter_domain"
                                         widget="domain"
-                                        attrs="{'invisible': [('order_filter_id', '=', False)]}"
+                                        invisible="order_filter_id == False"
                                         options="{'model': 'sale.order'}"
                                     />
                                     <div class="oe_edit_only oe_inline">
@@ -104,15 +106,17 @@
                             <div class="col-sm-8">
                                 <label
                                     for="picking_filter_id"
-                                    attrs="{'required':[('validate_picking','=',True)], 'invisible':[('validate_picking','!=',True)]}"
+                                    required="validate_picking == True"
+                                    invisible="validate_picking != True"
                                 />
                                 <div
-                                    attrs="{'required':[('validate_picking','=',True)], 'invisible':[('validate_picking','!=',True)]}"
+                                    required="validate_picking == True"
+                                    invisible="validate_picking != True"
                                 >
                                     <field
                                         name="picking_filter_domain"
                                         widget="domain"
-                                        attrs="{'invisible': [('picking_filter_id', '=', False)]}"
+                                        invisible="picking_filter_id == False"
                                         options="{'model': 'stock.picking'}"
                                     />
                                     <div class="oe_edit_only oe_inline">
@@ -140,15 +144,17 @@
                             <div class="col-sm-8">
                                 <label
                                     for="create_invoice_filter_id"
-                                    attrs="{'required':[('create_invoice','=',True)], 'invisible':[('create_invoice','!=',True)]}"
+                                    required="create_invoice == True"
+                                    invisible="create_invoice != True"
                                 />
                                 <div
-                                    attrs="{'required':[('create_invoice','=',True)], 'invisible':[('create_invoice','!=',True)]}"
+                                    required="create_invoice == True"
+                                    invisible="create_invoice != True"
                                 >
                                     <field
                                         name="create_invoice_filter_domain"
                                         widget="domain"
-                                        attrs="{'invisible': [('create_invoice_filter_id', '=', False)]}"
+                                        invisible="create_invoice_filter_id == False"
                                         options="{'model': 'sale.order'}"
                                     />
                                     <div class="oe_edit_only oe_inline">
@@ -176,15 +182,17 @@
                             <div class="col-sm-8">
                                 <label
                                     for="validate_invoice_filter_id"
-                                    attrs="{'required':[('validate_invoice','=',True)], 'invisible':[('validate_invoice','!=',True)]}"
+                                    required="validate_invoice == True"
+                                    invisible="validate_invoice != True"
                                 />
                                 <div
-                                    attrs="{'required':[('validate_invoice','=',True)], 'invisible':[('validate_invoice','!=',True)]}"
+                                    required="create_invoice == True"
+                                    invisible="create_invoice != True"
                                 >
                                     <field
                                         name="validate_invoice_filter_domain"
                                         widget="domain"
-                                        attrs="{'invisible': [('validate_invoice_filter_id', '=', False)]}"
+                                        invisible="validate_invoice_filter_id == False"
                                         options="{'model': 'account.move'}"
                                     />
                                     <div class="oe_edit_only oe_inline">
@@ -212,15 +220,17 @@
                             <div class="col-sm-8">
                                 <label
                                     for="payment_filter_id"
-                                    attrs="{'required':[('register_payment','=',True)], 'invisible':[('register_payment','!=',True)]}"
+                                    required="register_payment == True"
+                                    invisible="register_payment != True"
                                 />
                                 <div
-                                    attrs="{'required':[('register_payment','=',True)], 'invisible':[('register_payment','!=',True)]}"
+                                    required="register_payment == True"
+                                    invisible="register_payment != True"
                                 >
                                     <field
                                         name="payment_filter_domain"
                                         widget="domain"
-                                        attrs="{'invisible': [('payment_filter_id', '=', False)]}"
+                                        invisible="payment_filter_id == False"
                                         options="{'model': 'account.move'}"
                                     />
                                     <div class="oe_edit_only oe_inline">
@@ -245,15 +255,17 @@
                             <div class="col-sm-8">
                                 <label
                                     for="sale_done_filter_id"
-                                    attrs="{'required':[('sale_done','=',True)], 'invisible':[('sale_done','!=',True)]}"
+                                    required="sale_done == True"
+                                    invisible="sale_done != True"
                                 />
                                 <div
-                                    attrs="{'required':[('sale_done','=',True)], 'invisible':[('sale_done','!=',True)]}"
+                                    required="sale_done == True"
+                                    invisible="sale_done != True"
                                 >
                                     <field
                                         name="sale_done_filter_domain"
                                         widget="domain"
-                                        attrs="{'invisible': [('sale_done_filter_id', '=', False)]}"
+                                        invisible="sale_done_filter_id == False"
                                         options="{'model': 'sale.order'}"
                                     />
                                     <div class="oe_edit_only oe_inline">
