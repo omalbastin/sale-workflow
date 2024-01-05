@@ -90,6 +90,7 @@ Contributors
 -  Akim Juillerat <akim.juillerat@camptocamp.com>
 -  Thomas Fossoul <thomas@niboo.com>
 -  Phuc Tran Thanh <phuc@trobz.com>
+-  Sander Lienaerts <sander.lienaerts@codeforward.nl>
 
 Other credits
 -------------
