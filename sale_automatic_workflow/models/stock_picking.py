@@ -19,7 +19,7 @@ class StockPicking(models.Model):
         for picking in self:
             picking.action_assign()
             for move in picking.move_ids.filtered(
-                lambda m: m.state not in ["done", "cancel"]
+                lambda m: m.picked and m.state not in ["done", "cancel"]
             ):
                 rounding = move.product_id.uom_id.rounding
                 if (
