@@ -8,14 +8,12 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     workflow_process_id = fields.Many2one(
-        compute="_compute_payment_mode", store=True, readonly=False
+        compute="_compute_workflow_process_id", store=True, readonly=False
     )
 
-    @api.depends("partner_id", "company_id")
-    def _compute_payment_mode(self):
-        super()._compute_payment_mode()
+    @api.depends("payment_mode_id")
+    def _compute_workflow_process_id(self):
         for sale in self:
+            sale.workflow_process_id = False
             if sale.payment_mode_id.workflow_process_id:
                 sale.workflow_process_id = sale.payment_mode_id.workflow_process_id.id
-            else:
-                sale.workflow_process_id = False

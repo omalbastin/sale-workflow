@@ -11,7 +11,7 @@
         </field>
     </record>
     <record id="account_payment_mode_tree" model="ir.ui.view">
-        <field name="name">account.payment.mode.list</field>
+        <field name="name">account.payment.mode.tree</field>
         <field name="model">account.payment.mode</field>
         <field name="inherit_id" ref="account_payment_mode.account_payment_mode_tree" />
         <field name="arch" type="xml">
